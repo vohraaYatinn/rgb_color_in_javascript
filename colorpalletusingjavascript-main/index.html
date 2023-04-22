@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>RGB Color Range</h1>
+    <div class="color" id="color">
+        <p id="colorp">RGB(255,255,255)</p>
+    </div>
+    <div class="inp">
+        <label for="red">Red</label>
+        <input type="range" min="0" max="255" name="red" onchange="colorit()" id="red">
+        <label for="green">Green</label>
+    <input type="range" min="0" max="255" name="green" onchange="colorit()" id="green">
+    <label for="blue">Blue</label>
+    <input type="range" min="0" max="255" name="blue" onchange="colorit()" id="blue">
+</div>
+
+<section class="rgbacolor">
+    
+</section>
+</body>
+<script>
+function colorit(){
+var red_it=document.getElementById("red").value;
+var green_it=document.getElementById("green").value;
+var blue_it=document.getElementById("blue").value;
+console.log(red_it);
+console.log(green_it);
+console.log(blue_it);
+var color2=document.getElementById("color")
+color2.style.backgroundColor=`rgb(${red_it},${green_it},${blue_it}`;
+document.getElementById("colorp").innerText=`RGB(${red_it},${green_it},${blue_it})`;
+}
+
+    </script>
+</html>
